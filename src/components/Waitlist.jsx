@@ -6,9 +6,18 @@ import React, { useState, useRef, useEffect } from 'react';
  * On click: expands to [email input] + submit.
  * On submit: success message with hairline.
  *
- * Wire the onSubmit handler to Formspree / ConvertKit / custom
- * endpoint when going to production. Today it only captures
- * client-side and shows the success state.
+ * Integration — ConvertKit (Kit):
+ *   Reads VITE_CONVERTKIT_API_KEY and VITE_CONVERTKIT_FORM_ID
+ *   from Vite env. Posts to api.convertkit.com/v3/forms/{formId}/subscribe.
+ *   Both values are configured in the Vercel dashboard, not in code.
+ *
+ * Fallback: if env vars are absent, the component still renders
+ * and simulates a successful submit so UX is consistent in dev.
+ * Useful for local work without hitting the real API.
+ *
+ * Pass `endpoint` prop to override with a different provider
+ * (Formspree, custom serverless, etc.) — we'll POST { email }
+ * as JSON to whatever URL you give us.
  */
 
 const STATES = {
@@ -46,6 +55,9 @@ export function Waitlist({
 
     setState(STATES.SUBMITTING);
 
+    const ckApiKey = import.meta.env.VITE_CONVERTKIT_API_KEY;
+    const ckFormId = import.meta.env.VITE_CONVERTKIT_FORM_ID;
+
     try {
       if (endpoint) {
         const res = await fetch(endpoint, {
@@ -54,8 +66,21 @@ export function Waitlist({
           body: JSON.stringify({ email }),
         });
         if (!res.ok) throw new Error('bad response');
+      } else if (ckApiKey && ckFormId) {
+        /* ConvertKit subscribe endpoint */
+        const res = await fetch(
+          `https://api.convertkit.com/v3/forms/${ckFormId}/subscribe`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ api_key: ckApiKey, email }),
+          }
+        );
+        if (!res.ok) throw new Error('ConvertKit rejected request');
+        const data = await res.json();
+        if (data.error) throw new Error(data.error);
       } else {
-        /* No endpoint wired yet — simulate latency so UX is consistent */
+        /* No provider configured — simulate latency for dev UX */
         await new Promise((r) => setTimeout(r, 600));
       }
       setState(STATES.DONE);
