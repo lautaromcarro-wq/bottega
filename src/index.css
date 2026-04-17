@@ -426,6 +426,112 @@ h2 {
 }
 
 /* ========================================
+   WAITLIST — inline email capture
+   ======================================== */
+
+.waitlist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 460px;
+}
+
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+  max-width: 460px;
+  animation: reveal-up 600ms var(--ease-editorial);
+}
+
+.waitlist-input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--accent-deep);
+  transition: border-color 200ms var(--ease-editorial);
+}
+
+.waitlist-input-row:focus-within {
+  border-color: var(--accent-soft);
+}
+
+.waitlist-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 300;
+  padding: 0;
+  letter-spacing: 0.01em;
+}
+
+.waitlist-input::placeholder {
+  color: var(--text-faded);
+  font-style: italic;
+}
+
+.waitlist-input:disabled {
+  color: var(--text-muted);
+}
+
+.waitlist-submit {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  line-height: 1;
+  padding: 0 0.25rem;
+  cursor: pointer;
+  transition: color 200ms var(--ease-editorial),
+              transform 300ms var(--ease-editorial);
+}
+
+.waitlist-submit:hover:not(:disabled) {
+  color: var(--accent-soft);
+  transform: translateX(3px);
+}
+
+.waitlist-submit:disabled {
+  cursor: default;
+  color: var(--text-muted);
+}
+
+.waitlist-sending {
+  font-family: var(--font-serif);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.2em;
+  font-size: var(--text-sm);
+}
+
+.waitlist-error {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--wine);
+  margin: 0;
+  opacity: 0.85;
+}
+
+.waitlist-done {
+  animation: reveal-up 800ms var(--ease-editorial);
+}
+
+.waitlist-success {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--accent);
+  margin: 0;
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 

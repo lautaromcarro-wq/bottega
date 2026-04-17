@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { WordRotator, ReadingProgress } from './components/motion';
+import { Waitlist } from './components/Waitlist';
 
 /**
  * La Bottega — Main Application
@@ -219,7 +220,7 @@ function App() {
       >
         <p>Si llegaste hasta acá, probablemente estés buscando un lugar donde pensar mejor.</p>
         <p>La puerta está abierta. El ritmo lo marcás vos.</p>
-        <a href="#" className="btn-editorial">Solicitar acceso</a>
+        <Waitlist />
       </Chapter>
 
       <footer className="bottega-footer">
