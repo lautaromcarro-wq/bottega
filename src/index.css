@@ -62,6 +62,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -74,7 +75,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  overflow-x: hidden;
 }
 
 /* Grain texture — SVG-based, warm-dark */
@@ -195,7 +195,7 @@ button {
 .hero-chapter::after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -15% 0 0 0;
   background-image:
     linear-gradient(
       to bottom,
@@ -209,6 +209,8 @@ button {
   background-repeat: no-repeat;
   z-index: 0;
   filter: saturate(0.85);
+  transform: translateY(var(--hero-parallax, 0));
+  will-change: transform;
 }
 
 .hero-content {
@@ -278,7 +280,8 @@ button {
   margin: 0 auto;
 }
 
-.quote-heading {
+.quote-block .quote-heading,
+h2.quote-heading {
   font-family: var(--font-serif);
   font-size: var(--text-3xl);
   font-weight: 400;
@@ -286,7 +289,8 @@ button {
   color: var(--text-primary);
 }
 
-.quote-heading-italic {
+.quote-block .quote-heading-italic,
+p.quote-heading-italic {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: var(--text-3xl);
@@ -295,7 +299,8 @@ button {
   color: var(--accent);
 }
 
-.quote-body {
+.quote-block .quote-body,
+p.quote-body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   color: var(--text-body);
@@ -303,6 +308,7 @@ button {
   line-height: var(--leading-body);
 }
 
+.quote-block .quote-attribution,
 .quote-attribution {
   font-family: var(--font-serif);
   font-variant-caps: all-small-caps;
@@ -435,28 +441,183 @@ h2 {
 }
 
 /* ========================================
-   ANIMATIONS
+   MOTION — measured, editorial
    ======================================== */
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ---- Stagger (hero — plays on load) ---- */
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade {
-  animation: fadeIn 1.2s var(--ease-editorial) forwards;
-}
-
-.animate-fade-delayed {
+.stagger-item {
   opacity: 0;
-  animation: fadeIn 1.2s var(--ease-editorial) forwards;
-  animation-delay: 0.4s;
+  animation: reveal-up 900ms var(--ease-editorial) forwards;
+  animation-delay: calc(var(--i, 0) * 130ms + 200ms);
+}
+
+/* Italic subtitle — extra ink-settling delay */
+.hero-subtitle.stagger-item {
+  animation-delay: calc(var(--i, 0) * 130ms + 280ms);
+}
+
+/* ---- Hairline draw-in ---- */
+
+@keyframes draw-hairline {
+  0%   { width: 0; opacity: 0; }
+  25%  { opacity: 1; }
+  100% { width: 48px; opacity: 1; }
+}
+
+.stagger-hairline {
+  width: 0;
+  opacity: 0;
+  animation: draw-hairline 1000ms var(--ease-editorial) forwards;
+  animation-delay: calc(var(--i, 0) * 130ms + 200ms);
+}
+
+/* ---- Scroll-triggered reveal (chapters) ---- */
+
+.reveal .stagger-item,
+.reveal .stagger-hairline {
+  animation-play-state: paused;
+}
+
+.reveal.is-visible .stagger-item {
+  animation-play-state: running;
+}
+
+.reveal.is-visible .stagger-hairline {
+  animation-play-state: running;
+}
+
+/* Break chapter — fade the quote in */
+
+.break-chapter blockquote {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1200ms var(--ease-editorial),
+              transform 1200ms var(--ease-editorial);
+}
+
+.break-chapter .reveal.is-visible blockquote {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Clip-path pergamino reveal ---- */
+/* Chapter unrolls from top to bottom as it enters viewport */
+
+.reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1400ms var(--ease-editorial);
+}
+
+.reveal.is-visible {
+  clip-path: inset(0 0 0 0);
+}
+
+.break-chapter .reveal {
+  transition: clip-path 1600ms var(--ease-editorial);
+}
+
+/* ---- Word rotator (hero subtitle) ---- */
+
+.word-rotator {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  vertical-align: baseline;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.word-rotator-item {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 800ms var(--ease-editorial),
+              transform 800ms var(--ease-editorial);
+  pointer-events: none;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.word-rotator-item.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ---- Reading progress bar ---- */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(154, 130, 78, 0.08);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  opacity: 0.7;
+  transition: width 120ms linear;
+  transform-origin: left;
+}
+
+/* ---- Candle flicker on gold accents ---- */
+/* Very subtle luminance shift, like an oil lamp next to a manuscript */
+
+@keyframes candle-flicker {
+  0%, 100% { opacity: 1; }
+  14%      { opacity: 0.97; }
+  29%      { opacity: 1; }
+  47%      { opacity: 0.94; }
+  65%      { opacity: 1; }
+  81%      { opacity: 0.98; }
+}
+
+.hero-subtitle,
+.quote-heading-italic,
+.serif-quote,
+.brand-mark {
+  animation: candle-flicker 6.4s ease-in-out infinite;
+}
+
+/* ---- Respect user motion preferences ---- */
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger-item,
+  .stagger-hairline,
+  .break-chapter blockquote,
+  .word-rotator-item,
+  .hero-subtitle,
+  .quote-heading-italic,
+  .serif-quote,
+  .brand-mark {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .stagger-hairline {
+    width: 48px !important;
+  }
+  .hero-chapter::after {
+    transform: none !important;
+  }
+  .reveal {
+    clip-path: none !important;
+    transition: none !important;
+  }
+  .word-rotator-item:not(.is-active) {
+    display: none !important;
+  }
 }
 
 /* ========================================
