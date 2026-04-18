@@ -143,23 +143,25 @@ function App() {
       </div>
 
       {/* ========== CAPÍTULO III — EL OFICIO ========== */}
-      <Chapter
-        id="craft"
-        label="Capítulo III · El Oficio"
-        title="Práctica, observación, repetición."
-      >
-        <p>
-          En el Renacimiento, las <em>botteghe</em> eran talleres donde
-          se aprendía trabajando. El aprendiz observaba al maestro.
-          Copiaba. Fallaba. Volvía a empezar. Hasta que la técnica
-          dejaba de ser técnica y se volvía criterio.
-        </p>
-        <p>
-          El método no cambió. Cambió el material. Hoy el taller es
-          digital y el oficio es otro: entender cómo crecen los
-          negocios en internet.
-        </p>
-      </Chapter>
+      <div className="bg-backdrop bg-oficio">
+        <Chapter
+          id="craft"
+          label="Capítulo III · El Oficio"
+          title="Práctica, observación, repetición."
+        >
+          <p>
+            En el Renacimiento, las <em>botteghe</em> eran talleres donde
+            se aprendía trabajando. El aprendiz observaba al maestro.
+            Copiaba. Fallaba. Volvía a empezar. Hasta que la técnica
+            dejaba de ser técnica y se volvía criterio.
+          </p>
+          <p>
+            El método no cambió. Cambió el material. Hoy el taller es
+            digital y el oficio es otro: entender cómo crecen los
+            negocios en internet.
+          </p>
+        </Chapter>
+      </div>
 
       {/* ========== CAPÍTULO IV — EL TALLER ========== */}
       <Chapter
@@ -179,17 +181,19 @@ function App() {
       </Chapter>
 
       {/* ========== CAPÍTULO V — DENTRO DE LA BOTTEGA ========== */}
-      <Chapter
-        id="inside"
-        label="Capítulo V · Dentro de la Bottega"
-        title="Lo que vas a trabajar."
-      >
-        <p><em>Operator Calls.</em> Análisis de campañas y negocios reales, una vez por semana. En vivo.</p>
-        <p><em>Auditorías.</em> Revisión de cuentas, funnels, landings — con criterio, no con checklist.</p>
-        <p><em>Playbooks.</em> Conocimiento sistematizado en documentos que se pueden ejecutar.</p>
-        <p><em>Frameworks.</em> Modelos mentales reutilizables para pensar negocios digitales.</p>
-        <p><em>Comunidad privada.</em> Gente seria, sin ruido, que está construyendo algo.</p>
-      </Chapter>
+      <div className="bg-backdrop bg-bottega">
+        <Chapter
+          id="inside"
+          label="Capítulo V · Dentro de la Bottega"
+          title="Lo que vas a trabajar."
+        >
+          <p><em>Operator Calls.</em> Análisis de campañas y negocios reales, una vez por semana. En vivo.</p>
+          <p><em>Auditorías.</em> Revisión de cuentas, funnels, landings — con criterio, no con checklist.</p>
+          <p><em>Playbooks.</em> Conocimiento sistematizado en documentos que se pueden ejecutar.</p>
+          <p><em>Frameworks.</em> Modelos mentales reutilizables para pensar negocios digitales.</p>
+          <p><em>Comunidad privada.</em> Gente seria, sin ruido, que está construyendo algo.</p>
+        </Chapter>
+      </div>
 
       {/* ========== BREAK 2 ========== */}
       <div className="bg-backdrop bg-maestro">
@@ -219,18 +223,20 @@ function App() {
       </Chapter>
 
       {/* ========== INVITACIÓN FINAL ========== */}
-      <Chapter
-        id="invitation"
-        label="Capítulo Final · La Invitación"
-        title="Entrar al taller."
-      >
-        <p>Si llegaste hasta acá, probablemente estés buscando un lugar donde pensar mejor.</p>
-        <p>
-          <em>El conocimiento queda abierto. El acceso al taller, no.</em>
-        </p>
-        <p>La puerta está abierta. El ritmo lo marcás vos.</p>
-        <Waitlist />
-      </Chapter>
+      <div className="bg-backdrop bg-invitacion">
+        <Chapter
+          id="invitation"
+          label="Capítulo Final · La Invitación"
+          title="Entrar al taller."
+        >
+          <p>Si llegaste hasta acá, probablemente estés buscando un lugar donde pensar mejor.</p>
+          <p>
+            <em>El conocimiento queda abierto. El acceso al taller, no.</em>
+          </p>
+          <p>La puerta está abierta. El ritmo lo marcás vos.</p>
+          <Waitlist />
+        </Chapter>
+      </div>
 
       <footer className="bottega-footer">
         <p>
