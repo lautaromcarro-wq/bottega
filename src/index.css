@@ -475,30 +475,30 @@ h2 {
   background-position: center 40%;
 }
 
-/* Friedrich — Abtei im Eichwald / Abbey in the Oakwood (1810) */
+/* Jacques-Louis David — Oath of the Horatii (1784) */
 .bg-sistema::after {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.78) 0%,
+      rgba(12, 10, 8, 0.80) 0%,
       rgba(12, 10, 8, 0.88) 55%,
       rgba(12, 10, 8, 0.96) 100%
     ),
     url('./assets/bg-sistema.jpg');
-  background-position: center 50%;
+  background-position: center 55%;
 }
 
-/* Friedrich — Der Mönch am Meer / Monk by the Sea (1808-10) */
+/* Raphael — The School of Athens (1509-11) */
 .bg-maestro::after {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.72) 0%,
-      rgba(12, 10, 8, 0.85) 55%,
-      rgba(12, 10, 8, 0.95) 100%
+      rgba(12, 10, 8, 0.78) 0%,
+      rgba(12, 10, 8, 0.86) 55%,
+      rgba(12, 10, 8, 0.94) 100%
     ),
     url('./assets/bg-maestro.jpg');
-  background-position: center 60%;
+  background-position: center 40%;
 }
 
 /* Joseph Wright of Derby — An Iron Forge (1772) */
@@ -527,17 +527,17 @@ h2 {
   background-position: center 40%;
 }
 
-/* Johannes Vermeer — Het Straatje / The Little Street (1657-58) */
+/* Vilhelm Hammershøi — Weiße Türen, offene Türen / White Doors, Open Doors (1905) */
 .bg-invitacion::after {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.80) 0%,
-      rgba(12, 10, 8, 0.88) 55%,
-      rgba(12, 10, 8, 0.95) 100%
+      rgba(12, 10, 8, 0.78) 0%,
+      rgba(12, 10, 8, 0.86) 55%,
+      rgba(12, 10, 8, 0.93) 100%
     ),
     url('./assets/bg-invitacion.jpg');
-  background-position: center 35%;
+  background-position: center 40%;
 }
 
 /* ========================================
