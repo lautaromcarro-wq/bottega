@@ -225,13 +225,24 @@ function App() {
         title="Entrar al taller."
       >
         <p>Si llegaste hasta acá, probablemente estés buscando un lugar donde pensar mejor.</p>
+        <p>
+          <em>El conocimiento queda abierto. El acceso al taller, no.</em>
+        </p>
         <p>La puerta está abierta. El ritmo lo marcás vos.</p>
         <Waitlist />
       </Chapter>
 
       <footer className="bottega-footer">
         <p>
-          La Bottega Digital · MMXXVI · <em>Memento Audere Semper</em>
+          La Bottega · MMXXVI ·{' '}
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Bajo Creative Commons
+          </a>{' '}
+          · <em>Memento Audere Semper</em>
         </p>
       </footer>
     </main>
