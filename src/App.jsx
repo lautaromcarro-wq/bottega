@@ -105,18 +105,20 @@ function App() {
       </section>
 
       {/* ========== CAPÍTULO I — LA DECLARACIÓN ========== */}
-      <Chapter id="declaration" label="Capítulo I · La Declaración" title={null}>
-        <div className="quote-block">
-          <h2 className="quote-heading">Internet es el maestro.</h2>
-          <p className="quote-heading-italic">Nosotros, los aprendices.</p>
-          <p className="quote-body">
-            El conocimiento no se transmite de forma directa.
-            Se observa, se interpreta y se construye a través de la experiencia.
-            Aprender es prestar atención, ejecutar, equivocarse, ajustar.
-          </p>
-          <footer className="quote-attribution">— La Bottega</footer>
-        </div>
-      </Chapter>
+      <div className="bg-backdrop bg-declaracion">
+        <Chapter id="declaration" label="Capítulo I · La Declaración" title={null}>
+          <div className="quote-block">
+            <h2 className="quote-heading">Internet es el maestro.</h2>
+            <p className="quote-heading-italic">Nosotros, los aprendices.</p>
+            <p className="quote-body">
+              El conocimiento no se transmite de forma directa.
+              Se observa, se interpreta y se construye a través de la experiencia.
+              Aprender es prestar atención, ejecutar, equivocarse, ajustar.
+            </p>
+            <footer className="quote-attribution">— La Bottega</footer>
+          </div>
+        </Chapter>
+      </div>
 
       {/* ========== CAPÍTULO II — EL RUIDO ========== */}
       <Chapter
@@ -136,7 +138,9 @@ function App() {
       </Chapter>
 
       {/* ========== BREAK ========== */}
-      <BreakQuote text='"Sistema antes que táctica. Contexto antes que métrica. Negocio antes que canal."' />
+      <div className="bg-backdrop bg-sistema">
+        <BreakQuote text='"Sistema antes que táctica. Contexto antes que métrica. Negocio antes que canal."' />
+      </div>
 
       {/* ========== CAPÍTULO III — EL OFICIO ========== */}
       <Chapter
@@ -188,7 +192,9 @@ function App() {
       </Chapter>
 
       {/* ========== BREAK 2 ========== */}
-      <BreakQuote text='"El maestro no es una persona. Es Internet."' />
+      <div className="bg-backdrop bg-maestro">
+        <BreakQuote text='"El maestro no es una persona. Es Internet."' />
+      </div>
 
       {/* ========== CAPÍTULO VI — LA GENTE ========== */}
       <Chapter
