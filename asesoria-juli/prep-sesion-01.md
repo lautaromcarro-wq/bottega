@@ -5,6 +5,16 @@
 **Estado:** PREP. No es el SOP. El SOP sale de haber dado la sesión, no de imaginarla antes (`bottega_roadmap.md`).
 **Se llena en vivo en:** `sesion-01-captura.md` (no se toca desde acá).
 
+**Archivos de la sesión (en esta carpeta):**
+
+| Archivo | Para quién | Cuándo |
+|---|---|---|
+| `prep-sesion-01.md` | Lautaro | Antes y durante la sesión (este archivo) |
+| `planilla-semanal-medicion.xlsx` | Juli + su cliente | Se abre en vivo en el bloque 30-55 |
+| `material-juli-sesion-01.md` | Juli | Se le manda después de la sesión, ajustado con sus casos reales |
+| `kit-accesos.md` | Juli | Junto con la tarea: pasos para pedir acceso a Meta Business Suite y GA4, con mensaje al cliente |
+| `lead-importador-discovery.md` | Juli / Lautaro | Bloque de colchón (75-90) o cuando aparezca el tema del hermano |
+
 > **Nota de armado [PENDIENTE]:** este prep se escribió sin leer `sesion-01-captura.md` ni `curso/01` y `curso/02`, porque esos archivos todavía no estaban en el remoto de GitHub (solo en la máquina local). El contexto de Juli sale del brief. Antes de la sesión, cruzar este archivo con la plantilla de captura para que los nombres de los campos `[PENDIENTE]` coincidan.
 
 **Lo que sabemos de Juli:**
