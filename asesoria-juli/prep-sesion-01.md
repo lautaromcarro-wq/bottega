@@ -122,7 +122,7 @@ Acá es donde casi todos los freelancers se quedan cortos. Y es la única capa q
 - Venta: entrada, consumo, reserva de mesa o cumpleaños.
 - Origen: probablemente 100% Instagram + WhatsApp + lista.
 - Mínimo viable: códigos o nombres en lista por fuente + un número por noche que el dueño ya tiene (entradas o facturación) + consultas de reservas por WhatsApp etiquetadas.
-- Ojo: pauta de alcohol y nocturnidad tiene restricciones de edad en Meta. [VERIFICAR según el tipo de anuncio]
+- Ojo: si el anuncio muestra o promociona alcohol, Meta exige segmentar a mayores de 18 como mínimo (en Argentina la edad legal también es 18). Chequeado contra la política de alcohol de Meta (sep-2026). En la sesión, revisar si la pauta del bar está configurada con esa edad mínima.
 
 **Marca de pelucas**
 - Venta: ticket alto, decisión lenta, mucha confianza de por medio. El ciclo consulta → venta puede ser de semanas.
@@ -130,7 +130,7 @@ Acá es donde casi todos los freelancers se quedan cortos. Y es la única capa q
 - Mínimo viable: planilla de consultas con origen y etapa. Con 10-20 consultas por mes ya se ve el patrón.
 - **Ojo con dos cosas que pueden cambiar todo el setup:**
   1. Meta no permite anuncios que impliquen condiciones de salud ni religión de la persona ("¿Estás en quimio?", "Para la novia judía"). El mensaje tiene que hablar del producto, no del atributo de quien lo recibe.
-  2. Desde 2025, Meta limita el envío de eventos de conversión en negocios que clasifica como salud/bienestar. Si la marca queda clasificada así, el pixel puede no transmitir eventos de fondo de funnel y la planilla pasa a ser la fuente principal. [VERIFICAR en el Administrador de Eventos del cliente si aparece la restricción]
+  2. Desde enero/febrero 2025, cuando Meta clasifica la cuenta como salud/bienestar, restringe los eventos de fondo de funnel (Purchase, AddToCart, reservas). Hay dos niveles: restricción total (solo se puede optimizar por alcance, tráfico o interacción) o parcial (se corta la API de Conversiones y parte de los eventos). Tampoco se arman audiencias con esos eventos. Chequeado (sep-2026). Si la marca de pelucas cae ahí, la planilla pasa a ser la fuente principal, y los anuncios con destino a WhatsApp o formulario nativo son la vía más limpia. **Qué hacer en la sesión:** abrir el Administrador de Eventos del cliente y buscar el aviso de restricción en el conjunto de datos. Queda como hipótesis hasta verlo en la cuenta real, porque la clasificación depende de cómo Meta lee el negocio.
 - No se le puede pedir a la plataforma que segmente por "persona en tratamiento". Esa audiencia se construye con contenido, alianzas (centros oncológicos, fundaciones) y recomendación. La medición tiene que ver ese canal también.
 
 **Lead del hermano (importador de telas)**
@@ -138,6 +138,8 @@ Acá es donde casi todos los freelancers se quedan cortos. Y es la única capa q
 - Antes de prometer nada, saber: a quién le vende (confeccionistas, marcas, mayoristas), ticket, cuántos clientes nuevos puede absorber. Esto es el filtro, no un detalle.
 
 ### Cheat sheet semanal · cliente chico
+
+Implementado en `planilla-semanal-medicion.xlsx`: pestaña Consultas (una fila por persona que escribe) y pestaña Semanal (se carga solo el gasto, el resto se calcula).
 
 Cinco números. Todos los lunes. Una fila por semana en la planilla.
 
@@ -164,7 +166,7 @@ Lectura rápida:
 | 0-5 | **Apertura** | Marco de la sesión: hoy no vamos a hablar de anuncios. Vamos a hablar de cómo sabés si lo que hacés funciona. Qué se lleva al final: un sistema mínimo aplicado a un cliente real y una tarea para esta semana. | Expectativa alineada. |
 | 5-20 | **Intake en vivo** | Repasar las ★ (o hacerlas si no las contestó). Profundizar en la pregunta 4: la última vez que no supo responder. Anotar sus palabras textuales en la captura. | Campos `[PENDIENTE]` llenos. Dolor puntual identificado. |
 | 20-30 | **Concepto** | "Si el sistema no mide bien, el negocio decide mal." Aplicado a ella: si no puede mostrar qué generó su trabajo, el cliente decide con intuición. Y la intuición del cliente sobre un freelancer suele terminar en "bajemos el fee" o "probemos con otro". Medir es lo que sostiene su precio. Mostrar las 3 capas (quién entra, qué hace, cuánta plata). | Ella entiende por qué esto le conviene a ella, no solo al cliente. |
-| 30-55 | **Framework en vivo sobre un caso real** | Elegir UN cliente (criterio: el que tenga más accesos y más pauta; si no hay pauta, el de pelucas porque tiene ticket alto y cada venta cuenta). Llenar juntos las 3 capas con lo que hay hoy. Marcar en rojo lo que falta. Si hay acceso a Meta Business Suite en la llamada, abrirlo juntos y ver qué hay (pixel, eventos, cuenta publicitaria, restricciones). Armar la planilla semanal en ese momento, con sus columnas. | Mapa del cliente con huecos marcados. Planilla creada. |
+| 30-55 | **Framework en vivo sobre un caso real** | Elegir UN cliente (criterio: el que tenga más accesos y más pauta; si no hay pauta, el de pelucas porque tiene ticket alto y cada venta cuenta). Llenar juntos las 3 capas con lo que hay hoy. Marcar en rojo lo que falta. Si hay acceso a Meta Business Suite en la llamada, abrirlo juntos y ver qué hay (pixel, eventos, cuenta publicitaria, restricciones). Abrir la planilla semanal (`planilla-semanal-medicion.xlsx`, en esta misma carpeta) y cargar juntos el margen del cliente y las primeras consultas que recuerde. Se puede subir a Google Sheets para que la comparta con su cliente. | Mapa del cliente con huecos marcados. Planilla creada. |
 | 55-65 | **Bajar a acción** | Tres acciones para esta semana, no más. Ejemplo según el caso: (1) conseguir acceso admin, (2) crear los links de WhatsApp por fuente o los códigos, (3) pedirle al cliente el número de ventas de la semana pasada para arrancar la planilla. | 3 acciones con fecha. |
 | 65-70 | **Tarea** | Pedir o revisar acceso a Meta Business Suite (y GA4 si hay sitio) del cliente elegido. Traer para la sesión 2: capturas de lo que encontró + la primera semana de la planilla con datos reales. | Tarea clara y chica. |
 | 70-75 | **Cierre** | Agendar sesión 2 en ese momento (no "te escribo"). Preguntar: ¿qué fue lo más útil y qué te sobró? Anotarlo en la captura. Eso alimenta el SOP. | Sesión 2 en calendario. Feedback anotado. |
@@ -269,6 +271,14 @@ Medir cambia la conversación con el cliente.
 Sin medición, se discute el gusto: si el posteo quedó lindo, si la campaña "anduvo". Con medición, se discuten decisiones: qué seguir, qué cortar, dónde poner el siguiente peso.
 
 Para un freelancer, esa diferencia es la que sostiene el precio.
+
+---
+
+## Fuentes de verificación (políticas de Meta, chequeadas sep-2026)
+
+- Atributos personales en anuncios: [Meta Advertising Standards](https://transparency.meta.com/policies/ad-standards/)
+- Alcohol: [Meta · Alcohol](https://transparency.meta.com/policies/ad-standards/restricted-goods-services/alcohol/)
+- Restricciones de eventos para salud/bienestar: [resumen de la restricción de 2025](https://www.triplewhale.com/blog/meta-health-and-wellness-brands)
 
 ---
 
