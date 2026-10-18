@@ -11,6 +11,7 @@
 |---|---|---|
 | `prep-sesion-01.md` | Lautaro | Antes y durante la sesión (este archivo) |
 | `planilla-semanal-medicion.xlsx` | Juli + su cliente | Se abre en vivo en el bloque 30-55 |
+| [Planilla en Google Sheets](https://docs.google.com/spreadsheets/d/1V6aL_xjfDcvT0_WKno4qbkWw4SaEtaYTRZZAplTjEWs/edit) | Juli + su cliente | Misma planilla en una sola hoja, lista para compartir. Hacer una copia por cliente. |
 | `material-juli-sesion-01.md` | Juli | Se le manda después de la sesión, ajustado con sus casos reales |
 | `kit-accesos.md` | Juli | Junto con la tarea: pasos para pedir acceso a Meta Business Suite y GA4, con mensaje al cliente |
 | `lead-importador-discovery.md` | Juli / Lautaro | Bloque de colchón (75-90) o cuando aparezca el tema del hermano |
