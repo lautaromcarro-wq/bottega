@@ -3,8 +3,6 @@
 **Para:** Juli
 **Módulo 1:** Ecosistema / Medición
 
-> Borrador armado antes de la sesión. Se ajusta con lo que salga de la sesión antes de mandárselo a Juli: casos, nombres y números reales en lugar de los ejemplos.
-
 ---
 
 ## La idea

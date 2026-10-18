@@ -24,6 +24,8 @@ Freelancers que manejan contenido y pauta para clientes chicos deciden a ojo. Su
 
 - **Si hay sitio web:** Meta Pixel instalado, y si se puede, API de Conversiones (server-side) para no depender solo del navegador del usuario — el pixel solo pierde señal por bloqueadores y por Safari.
 - **Si no hay sitio (todo por Instagram/WhatsApp):** el sustituto es un link en la bio con UTMs, o el botón de WhatsApp de Meta Ads medido como evento de clic. No hay excusa de "no tengo sitio" para no medir nada — se mide lo que hay.
+- **Un link de WhatsApp por canal, con mensaje precargado.** `wa.me/549XXXXXXXXXX?text=Hola!%20Vengo%20del%20anuncio`, otro para la bio, otro para recomendaciones. El primer mensaje ya dice de dónde vino la persona.
+- **Sin nada de tecnología:** un código por canal ("decí NOCHE en la puerta") y la pregunta "¿cómo nos conociste?" anotada en cada venta.
 
 ### Capa 2 — ¿Sabés qué hace esa persona?
 
@@ -49,6 +51,8 @@ Si el cliente no tiene sitio y trabaja todo por Instagram o WhatsApp, el sustitu
 2. Usar el mismo nombre de campaña en todos los canales donde se promociona, para poder comparar después.
 3. Probar el evento antes de lanzar: mandar un mensaje de prueba, hacer una reserva de prueba, y confirmar que quedó registrado en algún lado.
 4. Si hay pixel y API de conversiones juntos, confirmar que no se están contando dos veces el mismo evento.
+5. Revisar las reglas del rubro en Meta. Si el anuncio muestra alcohol, la audiencia mínima es 18+. Ningún anuncio puede decir ni dar a entender que la persona tiene una condición de salud o una religión ("¿Estás en tratamiento?" no se aprueba). Y si Meta clasifica la cuenta como salud/bienestar, limita los eventos de conversión: se ve en el Administrador de Eventos, y en ese caso la planilla pasa a ser la fuente principal.
+6. Acordar con el cliente de dónde sale el número de ventas. Casi nunca es Meta: es la caja, el cuaderno o el WhatsApp del negocio.
 
 ## Cheat sheet semanal (qué mirar con un cliente chico)
 
@@ -60,6 +64,20 @@ Si el cliente no tiene sitio y trabaja todo por Instagram o WhatsApp, el sustitu
 
 Con 5 números por semana alcanza. Más que eso, para un cliente de este tamaño, es ruido.
 
+Cómo leerlos:
+
+- El costo por consulta sube y la tasa de cierre se mantiene → el problema está en el anuncio o en el público.
+- El costo por consulta se mantiene y la tasa de cierre cae → el problema está en la atención, el precio o la oferta. Más pauta no lo arregla.
+- El costo por venta supera lo que deja cada venta (margen) → frenar y revisar antes de seguir gastando.
+
+Plantilla lista: `asesoria-juli/planilla-semanal-medicion.xlsx` (también en Google Sheets). Una fila por consulta, el gasto de cada semana, y los números salen solos.
+
 ## Cómo explicarle esto a un cliente que no es técnico
 
 No se necesita que el cliente entienda GA4 ni Meta Pixel. Se necesita que entienda una frase: "esto nos permite saber qué está funcionando y qué no, en vez de adivinar". Todo lo técnico se queda del lado del freelancer. Lo único que el cliente necesita ver es el número que le importa: cuánto le costó cada venta.
+
+Una frase que sirve todos los meses:
+
+> "Este mes pusimos $X en publicidad. Eso trajo Y consultas. De esas, Z compraron. Cada venta nos costó $W, y a vos cada venta te deja $V."
+
+Si no se puede completar esa frase, falta medición. Y armarla es el siguiente trabajo.
