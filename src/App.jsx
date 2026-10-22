@@ -104,12 +104,15 @@ function App() {
       <div className="bg-backdrop bg-declaracion">
         <Chapter id="declaration" label="Capítulo I · La Declaración" title={null}>
           <div className="quote-block">
-            <h2 className="quote-heading">Internet es el maestro.</h2>
+            <h2 className="quote-heading">El negocio es el maestro.</h2>
             <p className="quote-heading-italic">Nosotros, los aprendices.</p>
             <p className="quote-body">
-              El conocimiento no se transmite de forma directa.
-              Se observa, se interpreta y se construye a través de la experiencia.
-              Aprender es prestar atención, ejecutar, equivocarse, ajustar.
+              Cada negocio es un mundo, igual que cada persona. Tiene sus
+              números y tiene su gente: clientes y audiencia que enseñan con
+              lo que dicen y con lo que hacen. Los números dicen qué pasa.
+              La gente dice por qué. Todo es distinto, pero hay buenas
+              prácticas, y si las hacés bien el camino aparece. Eso no lo da
+              un curso. Se observa, se prueba, se ajusta.
             </p>
             <footer className="quote-attribution">— La Bottega</footer>
           </div>
@@ -147,7 +150,7 @@ function App() {
         >
           <p>
             En el Renacimiento, las <em>botteghe</em> eran talleres donde
-            se aprendía trabajando. El aprendiz observaba al maestro.
+            se aprendía trabajando sobre encargos reales. El aprendiz observaba al maestro.
             Copiaba. Fallaba. Volvía a empezar. Hasta que la técnica
             dejaba de ser técnica y se volvía criterio.
           </p>
@@ -166,9 +169,10 @@ function App() {
         title="Cómo operamos."
       >
         <p>
-          Cada semana se analiza un negocio, una campaña, una decisión real.
-          Se desarma frente al grupo. Se discute con quienes están operando algo
-          parecido. Se vuelve a armar.
+          Se empieza de a uno: un negocio, un caso real, una conversación por
+          vez. Se desarma, se discute, se vuelve a armar. Cuando el método se
+          prueba en varios casos, pasa a grupos chicos. La comunidad viene al
+          final, con gente que ya trabajó.
         </p>
         <p>
           El ritmo es pausado. El contenido, denso. Importa más la
@@ -183,17 +187,17 @@ function App() {
           label="Capítulo V · Dentro de la Bottega"
           title="Lo que vas a trabajar."
         >
-          <p><em>Operator Calls.</em> Análisis de campañas y negocios reales, una vez por semana. En vivo.</p>
+          <p><em>Asesoría 1:1.</em> Un negocio real y los seis módulos del método: ecosistema, adquisición, CRO, compra, retención y loops.</p>
           <p><em>Auditorías.</em> Revisión de cuentas, funnels y landings, con criterio y no con checklist.</p>
           <p><em>Playbooks.</em> Conocimiento sistematizado en documentos que se pueden ejecutar.</p>
           <p><em>Frameworks.</em> Modelos mentales reutilizables para pensar negocios digitales.</p>
-          <p><em>Comunidad privada.</em> Gente seria, sin ruido, que está construyendo algo.</p>
+          <p><em>Cohortes y comunidad.</em> Más adelante: grupos chicos y, al final, una comunidad privada de gente seria que ya trabajó el método.</p>
         </Chapter>
       </div>
 
       {/* ========== BREAK 2 ========== */}
       <div className="bg-backdrop bg-maestro">
-        <BreakQuote text='"El maestro no es una persona. Es Internet."' />
+        <BreakQuote text='"El maestro no es un curso. Es un negocio funcionando."' />
       </div>
 
       {/* ========== CAPÍTULO VI — LA GENTE ========== */}
