@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap');
 
 :root {
   /* Background layers */
-  --bg-base: #0c0a08;
-  --bg-raised: #15120e;
-  --bg-sunken: #080705;
+  --bg-base: #1A1108;
+  --bg-raised: #251A0F;
+  --bg-sunken: #120B05;
 
   /* Text */
-  --text-primary: #f2ede3;
-  --text-body: #c9c3b5;
-  --text-muted: #8a8579;
-  --text-faded: #5a564e;
+  --text-primary: #F5EFE6;
+  --text-body: #D6C9B4;
+  --text-muted: #A69A87;
+  --text-faded: #7A6B58;
 
   /* Parchment gold */
   --accent: #d4b982;
   --accent-soft: #e8d5a3;
   --accent-deep: #9a824e;
+
+  /* Compartido con el sitio personal (CTA principal) */
+  --terracota: #E38955;
+  --terracota-hover: #EE9C6B;
+  --terracota-ink: #1A1108;
 
   /* Semantic */
   --wine: #7f1d1d;
@@ -24,7 +29,7 @@
 
   /* Fonts */
   --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
   --font-mark: 'Cormorant Garamond', Georgia, serif;
 
   /* Scale */
@@ -199,9 +204,9 @@ button {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.70) 0%,
-      rgba(12, 10, 8, 0.85) 60%,
-      rgba(12, 10, 8, 0.95) 100%
+      rgba(26, 17, 8, 0.70) 0%,
+      rgba(26, 17, 8, 0.85) 60%,
+      rgba(26, 17, 8, 0.95) 100%
     ),
     url('./assets/hero-astronomer.jpg');
   background-size: cover;
@@ -410,8 +415,8 @@ h2 {
 .btn-heavy {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: var(--wine);
-  color: var(--text-primary);
+  background: var(--terracota);
+  color: var(--terracota-ink);
   font-family: var(--font-serif);
   font-variant-caps: all-small-caps;
   letter-spacing: 0.2em;
@@ -422,7 +427,7 @@ h2 {
 }
 
 .btn-heavy:hover {
-  background: #9a2626;
+  background: var(--terracota-hover);
 }
 
 /* ========================================
@@ -467,9 +472,9 @@ h2 {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.82) 0%,
-      rgba(12, 10, 8, 0.88) 60%,
-      rgba(12, 10, 8, 0.95) 100%
+      rgba(26, 17, 8, 0.82) 0%,
+      rgba(26, 17, 8, 0.88) 60%,
+      rgba(26, 17, 8, 0.95) 100%
     ),
     url('./assets/bg-declaracion.jpg');
   background-position: center 40%;
@@ -480,9 +485,9 @@ h2 {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.80) 0%,
-      rgba(12, 10, 8, 0.88) 55%,
-      rgba(12, 10, 8, 0.96) 100%
+      rgba(26, 17, 8, 0.80) 0%,
+      rgba(26, 17, 8, 0.88) 55%,
+      rgba(26, 17, 8, 0.96) 100%
     ),
     url('./assets/bg-sistema.jpg');
   background-position: center 55%;
@@ -493,9 +498,9 @@ h2 {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.78) 0%,
-      rgba(12, 10, 8, 0.86) 55%,
-      rgba(12, 10, 8, 0.94) 100%
+      rgba(26, 17, 8, 0.78) 0%,
+      rgba(26, 17, 8, 0.86) 55%,
+      rgba(26, 17, 8, 0.94) 100%
     ),
     url('./assets/bg-maestro.jpg');
   background-position: center 40%;
@@ -506,9 +511,9 @@ h2 {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.82) 0%,
-      rgba(12, 10, 8, 0.90) 60%,
-      rgba(12, 10, 8, 0.96) 100%
+      rgba(26, 17, 8, 0.82) 0%,
+      rgba(26, 17, 8, 0.90) 60%,
+      rgba(26, 17, 8, 0.96) 100%
     ),
     url('./assets/bg-oficio.jpg');
   background-position: center 45%;
@@ -519,9 +524,9 @@ h2 {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.85) 0%,
-      rgba(12, 10, 8, 0.92) 60%,
-      rgba(12, 10, 8, 0.97) 100%
+      rgba(26, 17, 8, 0.85) 0%,
+      rgba(26, 17, 8, 0.92) 60%,
+      rgba(26, 17, 8, 0.97) 100%
     ),
     url('./assets/bg-bottega.jpg');
   background-position: center 40%;
@@ -532,9 +537,9 @@ h2 {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(12, 10, 8, 0.75) 0%,
-      rgba(12, 10, 8, 0.85) 55%,
-      rgba(12, 10, 8, 0.94) 100%
+      rgba(26, 17, 8, 0.75) 0%,
+      rgba(26, 17, 8, 0.85) 55%,
+      rgba(26, 17, 8, 0.94) 100%
     ),
     url('./assets/bg-invitacion.jpg');
   background-position: center 50%;
