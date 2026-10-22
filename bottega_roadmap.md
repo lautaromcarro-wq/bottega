@@ -6,7 +6,7 @@ En el Renacimiento, las botteghe eran talleres donde se aprendía un oficio trab
 
 En La Bottega Digital el oficio es otro: entender cómo crecen los negocios en internet.
 
-El maestro no es una persona. Es Internet — el sistema más grande de comportamiento humano jamás creado.
+El maestro no es un curso: es el negocio. Cada negocio es un mundo, con sus números y su gente, y de ahí se aprende. (Actualizado oct-2026; antes decía que el maestro era Internet.)
 
 ---
 

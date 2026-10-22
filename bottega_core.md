@@ -10,7 +10,7 @@ No es una academia. No es una comunidad motivacional. No es un curso. Es un ento
 
 ## Filosofía
 
-**Internet es el maestro.**
+**El negocio es el maestro.**
 
 El conocimiento no se transmite de forma directa. Se observa, se interpreta y se construye a través de la experiencia.
 
@@ -95,7 +95,7 @@ En otro tiempo, esto sería un taller en Florencia. Hoy, es un espacio en intern
 
 El aprendizaje no ocurre en clases. Ocurre en la observación, la práctica y la conversación.
 
-**Frase núcleo:** Internet es el maestro. Nosotros, los aprendices.
+**Frase núcleo:** El negocio es el maestro. Nosotros, los aprendices. (Cada negocio es un mundo: los números dicen qué pasa, la gente dice por qué. Todo es distinto, pero hay buenas prácticas, y si se hacen bien el camino aparece.)
 
 ---
 
