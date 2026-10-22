@@ -132,7 +132,7 @@ function App() {
           pero no saben por qué.
         </p>
         <p>
-          La asimetría nunca estuvo en la herramienta. Siempre estuvo
+          La ventaja nunca estuvo en la herramienta. Siempre estuvo
           en el criterio del que la usa.
         </p>
       </Chapter>
@@ -171,12 +171,12 @@ function App() {
       >
         <p>
           Cada semana se analiza un negocio, una campaña, una decisión real.
-          Se desarma en público. Se discute con quienes están operando algo
+          Se desarma frente al grupo. Se discute con quienes están operando algo
           parecido. Se vuelve a armar.
         </p>
         <p>
-          El ritmo es pausado. El contenido es denso. La frecuencia no
-          importa tanto como la consistencia.
+          El ritmo es pausado. El contenido, denso. Importa más la
+          constancia que el volumen.
         </p>
       </Chapter>
 
@@ -188,7 +188,7 @@ function App() {
           title="Lo que vas a trabajar."
         >
           <p><em>Operator Calls.</em> Análisis de campañas y negocios reales, una vez por semana. En vivo.</p>
-          <p><em>Auditorías.</em> Revisión de cuentas, funnels, landings — con criterio, no con checklist.</p>
+          <p><em>Auditorías.</em> Revisión de cuentas, funnels y landings, con criterio y no con checklist.</p>
           <p><em>Playbooks.</em> Conocimiento sistematizado en documentos que se pueden ejecutar.</p>
           <p><em>Frameworks.</em> Modelos mentales reutilizables para pensar negocios digitales.</p>
           <p><em>Comunidad privada.</em> Gente seria, sin ruido, que está construyendo algo.</p>
@@ -233,7 +233,7 @@ function App() {
           <p>
             <em>El conocimiento queda abierto. El acceso al taller, no.</em>
           </p>
-          <p>La puerta está abierta. El ritmo lo marcás vos.</p>
+          <p>Se entra por invitación. El ritmo lo marcás vos.</p>
           <Waitlist />
         </Chapter>
       </div>
