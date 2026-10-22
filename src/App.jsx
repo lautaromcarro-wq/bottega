@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useScrollReveal } from './hooks/useScrollReveal';
-import { WordRotator, ReadingProgress } from './components/motion';
+import { ReadingProgress } from './components/motion';
 import { Waitlist } from './components/Waitlist';
 
 /**
@@ -85,11 +85,7 @@ function App() {
             El oficio de entender
           </StaggerText>
           <StaggerText as="p" className="hero-subtitle" i={3}>
-            cómo crecen los negocios en{' '}
-            <WordRotator
-              words={['internet.', 'pantallas.', 'feeds.', 'algoritmos.']}
-              interval={4500}
-            />
+            cómo crecen los negocios en internet.
           </StaggerText>
           <StaggerText as="p" className="hero-body" i={5}>
             Un taller digital. Se aprende observando negocios reales,
@@ -234,6 +230,13 @@ function App() {
             <em>El conocimiento queda abierto. El acceso al taller, no.</em>
           </p>
           <p>Se entra por invitación. El ritmo lo marcás vos.</p>
+          <p>
+            El taller lo lleva{' '}
+            <a href="https://lauti.vercel.app" target="_blank" rel="noopener noreferrer">
+              Lautaro Manuel
+            </a>
+            , que lidera performance en Nebulab.
+          </p>
           <Waitlist />
         </Chapter>
       </div>
