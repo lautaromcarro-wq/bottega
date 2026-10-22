@@ -1,5 +1,6 @@
 # Mensaje post-sesión 1 · para mandarle a Juli
 
+**Cuándo:** después de dar la sesión 1 (todavía no se dio).
 **Canal:** WhatsApp (o mail si comparten docs por ahí).
 **Antes de mandarlo:**
 1. En Google Drive, hacé una copia de la planilla ("Bottega · Planilla semanal de medición") con el nombre del cliente de Juli. Compartila con ella como editora y pegá el link donde dice `[LINK PLANILLA]`.

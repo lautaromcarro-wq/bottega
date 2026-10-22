@@ -4,6 +4,8 @@
 **Formato:** 1:1, 60-75 min.
 **Estado:** PREP, hipótesis. Igual que en la sesión 1, el SOP sale de haberla dado. La captura se llena en vivo en `sesion-02-captura.md`, que se crea copiando la estructura de `sesion-01-captura.md`.
 
+> **Todavía no aplica.** La sesión 1 (Módulo 1) no se dio: hasta ahora solo hubo una reunión de contexto inicial. Este prep queda armado para después de la sesión 1.
+>
 > **Antes de usar este prep [PENDIENTE]:** completar la captura de la sesión 1 (al menos qué cliente se eligió y qué tarea quedó). Este prep asume que el cliente elegido fue uno de los dos y que la tarea fue la del kit de accesos. Si fue otra cosa, el bloque 1 cambia.
 
 ---

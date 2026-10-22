@@ -22,6 +22,7 @@
 
 - Freelo de contenido para un bar/boliche.
 - Estrategia de marketing para una marca artesanal de pelucas. Arrancó en la comunidad judía (pelucas de casamiento). Hoy también vende a personas que atraviesan quimioterapia.
+- En la marca de pelucas también suma horas presenciales en Capital, porque necesita facturar más (dato de la reunión de contexto).
 - Lead calificado: el hermano de la clienta de pelucas, importador de telas. Salió de esa misma relación.
 
 **Lo que NO sabemos (y no se asume):** qué usa para medir, cuál es su dolor puntual, si sus clientes tienen sitio o viven en Instagram/WhatsApp, qué le prometió al lead.

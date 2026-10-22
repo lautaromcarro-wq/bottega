@@ -26,7 +26,7 @@ Cada etapa se gana con la anterior. No se salta ninguna. El criterio de avance e
 
 **Para qué sirve:** no es solo cashflow. Es donde se valida el curriculum módulo por módulo y se extrae el SOP real — nunca al revés. El SOP de cada capítulo sale de haberlo dado, no de imaginarlo antes.
 
-**Caso piloto:** Julieta Castro. Capítulo I (Ecosistema & Medición) dado. Capítulo II en agenda.
+**Caso piloto:** Julieta Castro. Reunión de contexto inicial hecha. Capítulo I (Ecosistema & Medición) es la próxima sesión.
 
 **Métrica gatillo para pasar a Cohortes:**
 - Los 6 capítulos del curso escritos y validados en al menos un caso real cada uno (no alcanza con 1 y 2)
